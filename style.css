@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+:root {
+    --primarycyan: hsl(172, 67%, 45%);
+    --neutralVeryDarkCyan: hsl(183, 100%, 15%);
+    --neutralDarkGraishCyan: hsl(186, 14%, 43%);
+    --neutralGrayishCyan: hsl(184, 14%, 56%);
+    --neutralLightGrayishCyan: hsl(185, 41%, 84%);
+    --neutralVeryLightGrayishCyan: hsl(189, 41%, 97%);
+    --neutralWhite: hsl(0, 0%, 100%);
+    --primaryRed: hsl(0, 73%, 50%)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Mono', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--neutralLightGrayishCyan);
+    height: 100vh;
+}
+
+.header {
+    background-color: var(--neutralLightGrayishCyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 8px;
+    height: 15%;
+}
+
+.wrapperBackground {
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    border-radius: 25px 25px 0 0;
+    background-color: var(--neutralWhite);
+    padding: 0 24px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.topWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.wrapper .wrapper__bill {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.wrapper .wrapper__bill .billHeader {
+    color: var(--neutralDarkGraishCyan);
+    font-size: 15px;
+    height: 24px;
+    width: 60%;
+}
+
+.wrapperErrorTextBill {
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapperErrorTextPeople {
+    display: flex;
+    flex-direction: row;
+}
+
+.errorTextBill {
+    display: block;
+    color: var(--primaryRed);
+    width: 40%;
+    font-size: 16px;
+    text-align: end;
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
+}
+
+.errorTextPeople {
+    visibility: visible;
+    color: var(--primaryRed);
+    width: 40%;
+    font-size: 16px;
+    text-align: end;
+    font-weight: 700;
+}
+
+.wrapper .wrapper__bill .billInput {
+    height: 40px;
+    width: 100%;
+    background-color: var(--neutralVeryLightGrayishCyan);
+    border: 1px solid var(--neutralVeryLightGrayishCyan);
+    font-size: 24px;
+    text-align: end;
+    opacity: 0.4;
+    font-weight: 700;
+    outline: none;
+}
+
+
+.wrapper .wrapper__bill .inputBillWrapper .dollar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background: var(--neutralVeryLightGrayishCyan);
+    font-size: 24px;
+    padding: 0 16px;
+    border-radius: 5px;
+    border: 2px solid var(--neutralVeryLightGrayishCyan);
+}
+
+.wrapper .wrapper__bill .inputBillWrapper .dollar:focus-within {
+    border: 2px solid var(--primarycyan);
+}
+
+.wrapper .tipWrapper .tipHeader {
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--neutralDarkGraishCyan);
+}
+
+.wrapper .tipWrapper .mainBox__selectedTip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+
+.wrapper .tipWrapper .mainBox__selectedTip .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neutralVeryDarkCyan);
+    color: var(--neutralWhite);
+    width: 155px;
+    height: 48px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.wrapper .tipWrapper .mainBox__selectedTip .btn:active {
+    background-color: var(--primarycyan);
+    color: var(--neutralVeryDarkCyan);
+}
+
+.wrapper .tipWrapper .mainBox__selectedTip .btn:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 5px var(--neutralDarkGraishCyan);
+}
+
+
+.wrapper .tipWrapper .mainBox__selectedTip .customTip {
+    background-color: var(--neutralVeryLightGrayishCyan);
+    width: 155px;
+    height: 44px;
+    padding-right: 16px;
+    border-radius: 5px;
+}
+
+.wrapper .tipWrapper .mainBox__selectedTip .customTip:focus-within {
+    border: 2px solid var(--primarycyan);
+}
+
+.wrapper .tipWrapper .mainBox__selectedTip .customInput {
+    background-color: var(--neutralVeryLightGrayishCyan);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 24px;
+    border: 1px solid var(--neutralVeryLightGrayishCyan);
+    text-align: end;
+    font-weight: 700;
+    outline: none;
+}
+
+.wrapper .wrapper__numberOfPeople {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .wrapper__numberOfPeople .numberPeopleHeader {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--neutralDarkGraishCyan);
+    height: 28px;
+    width: 60%;
+}
+
+.wrapper .wrapper__numberOfPeople .inputNumberPeople {
+    height: 40px;
+    width: 100%;
+    background-color: var(--neutralVeryLightGrayishCyan);
+    border: 1px solid var(--neutralVeryLightGrayishCyan);
+    font-size: 24px;
+    text-align: end;
+    opacity: 0.4;
+    font-weight: 700;
+    outline: none;
+}
+
+.wrapper .wrapper__numberOfPeople .inputPeopleWrapper .person {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background: var(--neutralVeryLightGrayishCyan);
+    font-size: 24px;
+    padding: 0 16px;
+    border-radius: 5px;
+    border: 2px solid var(--neutralVeryLightGrayishCyan);
+}
+
+.wrapper .wrapper__numberOfPeople .inputPeopleWrapper .person:focus-within {
+    border: 2px solid var(--primarycyan);
+}
+
+.wrapper .wrapper__summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 275px;
+    border: 1px solid var(--neutralVeryDarkCyan);
+    border-radius: 16px;
+    background-color: var(--neutralVeryDarkCyan);
+    padding: 32px 24px 24px 24px;
+}
+
+.wrapper .wrapper__summary .resetBtn {
+    border: 1px var(--primarycyan);
+    border-radius: 5px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: var(--primarycyan);
+    text-transform: uppercase;
+    opacity: 0.3;
+}
+
+.wrapper .wrapper__summary .resetBtn:active {
+    background-color: var(--primarycyan);
+    color: var(--neutralVeryDarkCyan);
+    opacity: 1;
+}
+
+.wrapper .wrapper__summary .resetBtn:hover {
+    background-color: var(--primarycyan);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.outputTip, .outputTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.outputText {
+    display: flex;
+    flex-direction: column;
+}
+
+.tipAmount, .total {
+    font-size: 16px;
+    color: var(--neutralWhite);
+    font-weight: 700;
+}
+
+.person {
+    font-size: 13px;
+    color: var(--neutralGrayishCyan);
+    font-weight: 700;
+}
+
+.outputTipNumber, .outputTotalNumber {
+    font-size: 32px;
+    color: var(--primarycyan);
+    font-weight: 700;
+}
+
+.wrapperOutputText {
+    width: 100%;
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+@media only screen and (min-width: 960px) {
+
+    .header {
+        height: 45vh;
+    }
+
+    .wrapper {
+        width: 65vw;
+        height: 45vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        border-radius: 25px;
+        padding: 40px;
+    }
+
+    .wrapperBackground {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+
+    }
+
+    .topWrapper {
+        width: 50%;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .wrapper .wrapper__summary {
+        width: 50%;
+        height: 100%;
+        padding: 40px;
+
+    }
+
+    .wrapperOutputText {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 32px;
+    }
+
+    .outputTipNumber, .outputTotalNumber {
+        font-size: 40px;
+    }
+
+    .wrapper .tipWrapper .mainBox__selectedTip .btn {
+        width: 116px;
+    }
+
+    .wrapper .tipWrapper .mainBox__selectedTip .customTip {
+        width: 116px;
+        padding-right: 8px;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 960px) {
+
+    .wrapper {
+        max-width: 900px;
+        max-height: 440px;
+    }
+}

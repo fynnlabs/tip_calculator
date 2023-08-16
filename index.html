@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+<header class="header"><img src="./images/logo.svg" alt="Splitter Logo">
+</header>
+<div class="wrapperBackground">
+    <main class="wrapper">
+        <div class="topWrapper">
+            <div class="wrapper__bill">
+                <div class="wrapperErrorTextBill" id="WrapperErrorTextBill">
+                    <label for="billInput" class="billHeader">Bill</label>
+                    <p id="errorTextBill"></p></div>
+                <div class="inputBillWrapper">
+            <span class="dollar" id="dollar"> <img src="./images/icon-dollar.svg" alt="dollar symbol">
+            <input type="number" placeholder="0" id="billInput" class="billInput" min="0">
+            </span>
+                </div>
+            </div>
+            <div class="tipWrapper">
+                <div class="tipHeader">Select Tip %</div>
+                <section class="mainBox__selectedTip">
+                    <div class="fiveTip btn" id="fiveBtn">5%</div>
+                    <div class="tenTip btn" id="tenBtn">10%</div>
+                    <div class="fifteenTip btn" id="fifteenBtn">15%</div>
+                    <div class="twentyFiveTip btn" id="twentyFiveBtn">25%</div>
+                    <div class="fiftyTip btn" id="fiftyBtn">50%</div>
+                    <div class="customTip" id="customBtn">
+                        <input type="number" placeholder="Custom" id="customInput" class="customInput" min="0">
+                    </div>
+                </section>
+            </div>
+
+            <div class="wrapper__numberOfPeople">
+                <div class="wrapperErrorTextPeople" id="wrapperErrorTextPeople">
+                    <label for="inputNumberPeople" class="numberPeopleHeader">Number of People</label>
+                    <p class="errorTextPeople" id="errorTextPeople"></p>
+                </div>
+                <div class="inputPeopleWrapper">
+                <span class="person" id="person"> <img src="./images/icon-person.svg" alt="person symbol">
+                <input type="number" placeholder="0" id="inputNumberPeople" class="inputNumberPeople" min="1">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper__summary">
+            <div class="wrapperOutputText">
+                <div class="outputTip">
+                    <div class="outputText">
+                        <span class="tipAmount">Tip Amount</span>
+                        <span class="person">/ person</span>
+                    </div>
+                    <div class="outputTipNumber" id="outputTipNumber">$0.00</div>
+                </div>
+                <div class="outputTotal">
+                    <div class="outputText">
+                        <span class="total">Total</span>
+                        <span class="person">/ person</span>
+                    </div>
+                    <div class="outputTotalNumber" id="outputTotalNumber">$0.00</div>
+                </div>
+            </div>
+            <div class="resetBtn" id="resetBtn">
+                Reset
+            </div>
+        </div>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
